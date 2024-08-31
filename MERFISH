@@ -1,2 +1,4 @@
 # jupiter notebook
 !pip install scanpy
+import scanpy as sc
+adata = sc.read_h5ad('/path/file_name.h5ad')
