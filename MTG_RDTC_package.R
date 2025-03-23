@@ -1,8 +1,8 @@
 library(Seurat)
 library(spacexr)
 library(tidyverse)
-
-### Load Visium HD data
+# Use Seurat v5 to avoid error
+# Load Visium HD data
 CT_2_5 <- Load10X_Spatial(data.dir ="/spatial_transcriptomics/OSUMC/counts_and_images/2-5", 
                               filename = "filtered_feature_bc_matrix.h5")
 
