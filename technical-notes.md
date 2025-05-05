@@ -14,3 +14,7 @@ So:
   ## QC
   •	in_tissue == 1 → The spot does overlap the tissue (keep it)  
 	•	in_tissue == 0 → The spot does not overlap the tissue (discard it)
+
+## Niche
+Cells belong to the same niche if they are surrounded by a similar composition of neighboring cell types — even if they are far apart in the tissue.
+Seurat v5 https://satijalab.org/seurat/articles/seurat5_spatial_vignette_2
