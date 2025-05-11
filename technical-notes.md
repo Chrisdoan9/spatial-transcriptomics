@@ -35,3 +35,10 @@ Seurat v5 https://satijalab.org/seurat/articles/seurat5_spatial_vignette_2
 |------------------|------------------------------------------------------------|------------------------------------------------------------------------|
 | **Pixel space**  | Coordinates measured in pixels of an image (e.g., 512×512 image) | A gene signal at X = 200, Y = 300 pixels                              |
 | **Microns (µm)** | Coordinates measured in real-world physical distance on the tissue | The same gene is located at X = 55.2 µm, Y = 82.7 µm from the origin of the slide |
+
+## H&E image
+
+H = hematoxylin, E = eosin  
+hematoxylin (blue-purple) binds DNA/RNA (nuclei) & eosin (pink-red) binds proteins (cytoplasm, ECM).
+Two contrasting colours give instant insight into tissue architecture and cell morphology.
+https://en.wikipedia.org/wiki/H%26E_stain
