@@ -1,3 +1,5 @@
+BiocManager::install("spacexr")
+
 library(Seurat)
 library(spacexr)
 library(tidyverse)
