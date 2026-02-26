@@ -4,7 +4,7 @@ library(Seurat)
 library(spacexr)
 library(tidyverse)
 # Use Seurat v5 to avoid error
-# Load Visium HD data
+# Load Visium data
 CT_2_5 <- Load10X_Spatial(data.dir ="/spatial_transcriptomics/OSUMC/counts_and_images/2-5", 
                               filename = "filtered_feature_bc_matrix.h5")
 
@@ -12,7 +12,7 @@ CT_2_5 <- NormalizeData(CT_2_5)
 CT_2_5 <- FindVariableFeatures(CT_2_5)
 CT_2_5 <- ScaleData(CT_2_5)
 
-# sketch the cortical subset of the Visium HD dataset
+# Sketch the cortical subset of the Visium HD dataset
 CT_2_5 <- SketchData(object = CT_2_5, ncells = 50000, method = "LeverageScore", 
                      sketched.assay = "sketch")
 
@@ -26,7 +26,7 @@ CT_2_5 <- RunUMAP(CT_2_5, reduction = "pca.cortex.sketch", reduction.name = "uma
                   return.model = T, dims = 1:50, verbose = T)
 DimPlot(AD2_3, label = T)
 
-# create the RCTD query object using 'SpatialRNA' function
+# Create the RCTD query object using 'SpatialRNA' function
 counts_hd <- CT_2_5[["sketch"]]$counts
 CT_2_5_cells_hd <- colnames(CT_2_5[["sketch"]])
 coords <- GetTissueCoordinates(CT_2_5)[CT_2_5_cells_hd, 1:2]
